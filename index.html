@@ -1,3 +1,5 @@
+<!-- God's in his heaven, all's right with the world. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,24 +7,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet/less" type="text/css" href="style.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <main>
         <header>
             <button>Portfolio</button>
-            <button>_ola</button>
-            <button>_sobre_mim</button>
-            <button>_projetos</button>
-            <button>_contato</button>
+            <button></button>
+            <button id="olaTab" class="current" onclick="switchTab('ola')">_ola</button>
+            <button id="sobreTab" onclick="switchTab('sobre')">_sobre_mim</button>
+            <button id="projetosTab" onclick="switchTab('projetos')">_projetos</button>
+            <button></button>
+            <button id="contatoTab" onclick="switchTab('contato')">_contato</button>
         </header>
         <section id="contentBody">
             <div id="text">
-                <h5>Olá, meu nome é</h5>
-                <h1>Felipe Cornélio</h1>
-                <h3>> Desenvolvedor de sistemas embarcados</h3>
+                <h4>Olá, meu nome é</h4>
+                <h1>Felipe<br>Cornélio</h1>
+                <h3>> Dev<br>de sistemas embarcados</h3>
                 <span>// meu perfil do Github:</span>
                 <span>const githubLink = "https://github.com/diethyllether"</span>
             </div>
@@ -31,7 +41,7 @@
             </div>
         </section>
         <footer>
-            <button>Contato:</button>
+            <h4>Contato:</h4>
 
         </footer>
     </main>
