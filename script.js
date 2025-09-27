@@ -1,8 +1,74 @@
 // God's in his heaven, all's right with the world.
+addEventListener("DOMContentLoaded", () => {
+    switchTab(localStorage.getItem("currentTab"));
+});
+
 
 function switchTab(tabName) {
-    const ola = document.getElementById("olaTab");
-    const sobre = document.getElementById("sobreTab");
-    const projetos = document.getElementById("projetosTab");
-    const contato = document.getElementById("contatoTab");
+    const olaTab = document.getElementById("olaTab");
+    const olaContent = document.getElementById("olaContent");
+    const sobreTab = document.getElementById("sobreTab");
+    const sobreContent = document.getElementById("sobreContent");
+    const projetosTab = document.getElementById("projetosTab");
+    const projetosContent = document.getElementById("projetosContent");
+    const contatoTab = document.getElementById("contatoTab");
+    const contatoContent = document.getElementById("contatoContent");
+
+    switch(tabName) {
+        case "ola":
+            olaContent.style.display = "grid";
+            sobreContent.style.display = "none";
+            projetosContent.style.display = "none";
+            contatoContent.style.display = "none";
+
+            olaTab.classList.toggle("current");
+            sobreTab.classList.remove("current");
+            projetosTab.classList.remove("current");
+            contatoTab.classList.remove("current");
+
+            localStorage.setItem("currentTab", "ola");
+            break;
+        case "sobre":
+            sobreContent.style.display = "grid";
+            olaContent.style.display = "none";
+            projetosContent.style.display = "none";
+            contatoContent.style.display = "none";
+
+            sobreTab.classList.toggle("current");
+            olaTab.classList.remove("current");
+            projetosTab.classList.remove("current");
+            contatoTab.classList.remove("current");
+
+            localStorage.setItem("currentTab", "sobre");
+            break;
+        case "projetos":
+            projetosContent.style.display = "grid";
+            sobreContent.style.display = "none";
+            olaContent.style.display = "none";
+            contatoContent.style.display = "none";
+
+            projetosTab.classList.toggle("current");
+            sobreTab.classList.remove("current");
+            olaTab.classList.remove("current");
+            contatoTab.classList.remove("current");
+
+            localStorage.setItem("currentTab", "projetos");
+            break;
+        case "contato":
+            contatoContent.style.display = "grid";
+            sobreContent.style.display = "none";
+            projetosContent.style.display = "none";
+            olaContent.style.display = "none";
+
+            contatoTab.classList.toggle("current");
+            sobreTab.classList.remove("current");
+            projetosTab.classList.remove("current");
+            olaTab.classList.remove("current");
+
+            localStorage.setItem("currentTab", "contato");
+            break;
+        default:
+            switchTab("ola");
+            break;
+    }
 }

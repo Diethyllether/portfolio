@@ -97,8 +97,8 @@ body {
       }
     }
 
-    #contentBody {
-      display: grid;
+    #olaContent {
+      display: none;
       grid-template-columns: 65% 35%;
       height: 90vh;
       width: 100%;
@@ -156,6 +156,10 @@ body {
       #euMermo {
         align-self: center;
       }
+    }
+
+    #sobreContent {
+      display: none;
     }
 
     footer {
