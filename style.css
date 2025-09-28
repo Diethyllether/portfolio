@@ -58,7 +58,7 @@ body {
         font-weight: 300;
         border-bottom: 2px solid var(--stroke);
 
-        &:hover:not(:nth-child(5)) {
+        &:hover:not(:nth-child(5),:first-child) {
           filter: brightness(120%);
         }
 
@@ -160,6 +160,7 @@ body {
 
     #sobreContent {
       display: none;
+      grid-template-columns: 4% 14%;
     }
 
     footer {

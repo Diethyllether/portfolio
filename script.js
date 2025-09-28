@@ -1,6 +1,6 @@
 // God's in his heaven, all's right with the world.
 addEventListener("DOMContentLoaded", () => {
-    switchTab(localStorage.getItem("currentTab"));
+    switchTab(sessionStorage.getItem("currentTab"));
 });
 
 
@@ -26,7 +26,7 @@ function switchTab(tabName) {
             projetosTab.classList.remove("current");
             contatoTab.classList.remove("current");
 
-            localStorage.setItem("currentTab", "ola");
+            sessionStorage.setItem("currentTab", "ola");
             break;
         case "sobre":
             sobreContent.style.display = "grid";
@@ -39,7 +39,7 @@ function switchTab(tabName) {
             projetosTab.classList.remove("current");
             contatoTab.classList.remove("current");
 
-            localStorage.setItem("currentTab", "sobre");
+            sessionStorage.setItem("currentTab", "sobre");
             break;
         case "projetos":
             projetosContent.style.display = "grid";
@@ -52,7 +52,7 @@ function switchTab(tabName) {
             olaTab.classList.remove("current");
             contatoTab.classList.remove("current");
 
-            localStorage.setItem("currentTab", "projetos");
+            sessionStorage.setItem("currentTab", "projetos");
             break;
         case "contato":
             contatoContent.style.display = "grid";
@@ -65,7 +65,7 @@ function switchTab(tabName) {
             projetosTab.classList.remove("current");
             olaTab.classList.remove("current");
 
-            localStorage.setItem("currentTab", "contato");
+            sessionStorage.setItem("currentTab", "contato");
             break;
         default:
             switchTab("ola");
