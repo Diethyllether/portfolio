@@ -21,7 +21,7 @@ function switchTab(tabName) {
             projetosContent.style.display = "none";
             contatoContent.style.display = "none";
 
-            olaTab.classList.toggle("current");
+            olaTab.classList.add("current");
             sobreTab.classList.remove("current");
             projetosTab.classList.remove("current");
             contatoTab.classList.remove("current");
@@ -34,7 +34,7 @@ function switchTab(tabName) {
             projetosContent.style.display = "none";
             contatoContent.style.display = "none";
 
-            sobreTab.classList.toggle("current");
+            sobreTab.classList.add("current");
             olaTab.classList.remove("current");
             projetosTab.classList.remove("current");
             contatoTab.classList.remove("current");
@@ -47,7 +47,7 @@ function switchTab(tabName) {
             olaContent.style.display = "none";
             contatoContent.style.display = "none";
 
-            projetosTab.classList.toggle("current");
+            projetosTab.classList.add("current");
             sobreTab.classList.remove("current");
             olaTab.classList.remove("current");
             contatoTab.classList.remove("current");
@@ -60,7 +60,7 @@ function switchTab(tabName) {
             projetosContent.style.display = "none";
             olaContent.style.display = "none";
 
-            contatoTab.classList.toggle("current");
+            contatoTab.classList.add("current");
             sobreTab.classList.remove("current");
             projetosTab.classList.remove("current");
             olaTab.classList.remove("current");
