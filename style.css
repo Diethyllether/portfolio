@@ -15,6 +15,18 @@
   --body-size: 10pt;
 }
 
+.claro {
+  --background: #E8E8E8;
+  --primary: #EA523E;
+  --secondary: #585656;
+  --accent: #F54A24;
+  --text: #000000;
+  --text2: #EA523E;
+  --text3: #F54A24;
+  --text4: ##05DF72;
+  --stroke: #000000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

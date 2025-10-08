@@ -1,6 +1,7 @@
 // God's in his heaven, all's right with the world.
 addEventListener("DOMContentLoaded", () => {
     switchTab(sessionStorage.getItem("currentTab"));
+    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.add("claro")) : (document.documentElement.classList.remove("claro"));
 });
 
 
@@ -14,7 +15,7 @@ function switchTab(tabName) {
     const contatoTab = document.getElementById("contatoTab");
     const contatoContent = document.getElementById("contatoContent");
 
-    switch(tabName) {
+    switch (tabName) {
         case "ola":
             olaContent.style.display = "grid";
             sobreContent.style.display = "none";
@@ -71,4 +72,8 @@ function switchTab(tabName) {
             switchTab("ola");
             break;
     }
+}
+
+function trocarTema() {
+    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.add("claro")) : (document.documentElement.classList.remove("claro"));
 }
