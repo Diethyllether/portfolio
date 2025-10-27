@@ -75,5 +75,5 @@ function switchTab(tabName) {
 }
 
 function trocarTema() {
-    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.add("claro")) : (document.documentElement.classList.remove("claro"));
+    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.remove("claro"), localStorage.setItem("tema", "escuro")) : (document.documentElement.classList.add("claro"), localStorage.setItem("tema", "claro"));
 }
