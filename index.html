@@ -26,7 +26,7 @@
             <button id="sobreTab" onclick="switchTab('sobre')">_sobre_mim</button>
             <button id="projetosTab" onclick="switchTab('projetos')">_projetos</button>
             <button></button>
-            <button id="switch" onclick="trocarTema()"><i class="fa-solid fa-moon"></i></button>
+            <button onclick="trocarTema()"><i id="switch" class="fa-solid fa-moon"></i></button>
             <button id="contatoTab" onclick="switchTab('contato')">_contato</button>
         </header>
         <section id="olaContent">
@@ -88,16 +88,15 @@
                     Não sobra nada
                 </details>
             </aside>
-            <header></header>
             <section>
-                <form action="">
-                    <h3>_nome:</h3>
+                <form action="#" onsubmit="formSubmit()">
+                    <label for="nome">_nome</label>
                     <input type="text" id="nome">
-                    <h3>_email:</h3>
+                    <label for="email">_nome</label>
                     <input type="email" id="email">
-                    <h3>_mensagem:</h3>
-                    <textarea id=""></textarea>
-                    <input type="submit" value="">
+                    <label for="mensagem">_nome</label>
+                    <textarea id="mensagem"></textarea>
+                    <input type="submit" value="enviar-mensagem">
                 </form>
             </section>
 

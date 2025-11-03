@@ -4,7 +4,6 @@ addEventListener("DOMContentLoaded", () => {
     (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.add("claro")) : (document.documentElement.classList.remove("claro"));
 });
 
-
 function switchTab(tabName) {
     const olaTab = document.getElementById("olaTab");
     const olaContent = document.getElementById("olaContent");
@@ -15,12 +14,15 @@ function switchTab(tabName) {
     const contatoTab = document.getElementById("contatoTab");
     const contatoContent = document.getElementById("contatoContent");
 
+    const background = document.getElementById("background");
+
     switch (tabName) {
         case "ola":
             olaContent.style.display = "grid";
             sobreContent.style.display = "none";
             projetosContent.style.display = "none";
             contatoContent.style.display = "none";
+            background.style.display = "block";
 
             olaTab.classList.add("current");
             sobreTab.classList.remove("current");
@@ -34,6 +36,7 @@ function switchTab(tabName) {
             olaContent.style.display = "none";
             projetosContent.style.display = "none";
             contatoContent.style.display = "none";
+            background.style.display = "none";
 
             sobreTab.classList.add("current");
             olaTab.classList.remove("current");
@@ -47,6 +50,7 @@ function switchTab(tabName) {
             sobreContent.style.display = "none";
             olaContent.style.display = "none";
             contatoContent.style.display = "none";
+            background.style.display = "none";
 
             projetosTab.classList.add("current");
             sobreTab.classList.remove("current");
@@ -60,6 +64,7 @@ function switchTab(tabName) {
             sobreContent.style.display = "none";
             projetosContent.style.display = "none";
             olaContent.style.display = "none";
+            background.style.display = "none";
 
             contatoTab.classList.add("current");
             sobreTab.classList.remove("current");
@@ -75,5 +80,24 @@ function switchTab(tabName) {
 }
 
 function trocarTema() {
-    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.remove("claro"), localStorage.setItem("tema", "escuro")) : (document.documentElement.classList.add("claro"), localStorage.setItem("tema", "claro"));
+    const button = document.getElementById("switch");
+    (localStorage.getItem("tema") == "claro")
+    ? (
+        document.documentElement.classList.remove("claro"),
+        localStorage.setItem("tema", "escuro"),
+        button.classList.remove("fa-sun"),
+        button.classList.add("fa-moon")
+    )
+    : (
+        document.documentElement.classList.add("claro"),
+        localStorage.setItem("tema", "claro"),
+        button.classList.remove("fa-moon"),
+        button.classList.add("fa-sun")
+    );
+}
+
+function formSubmit() {
+    let name = document.getElementById().value;
+    let email = document.getElementById().value;
+    let message = document.getElementById().value;
 }

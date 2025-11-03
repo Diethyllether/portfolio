@@ -36,6 +36,8 @@
 }
 
 body {
+  background-color: var(--background);
+
   a {
     text-decoration: none;
   }
@@ -100,6 +102,11 @@ body {
         }
 
         &:nth-child(5) {
+          border-left: 1px solid var(--stroke);
+          border-right: 1px solid var(--stroke);
+        }
+
+        &:nth-child(6) {
           border-left: 1px solid var(--stroke);
           border-right: 1px solid var(--stroke);
         }
@@ -181,6 +188,61 @@ body {
       }
     }
 
+    #contatoContent {
+      grid-template-columns: 15% 85%;
+      grid-template-rows: 5vh 85vh;
+
+      aside {
+        grid-row: span 2;
+        border-right: var(--stroke) 2px solid;
+
+        
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2;
+        grid-row: 2;
+        border-top: var(--stroke) 2px solid;
+
+        form {
+          display: grid;
+          text-align: left;
+          grid-template-rows: auto 4vh auto 4vh auto 12vh 6vh;
+          gap: 1vh;
+          width: 60%;
+          max-width: 300px;
+
+          label {
+            font-family: var(--body);
+            font-size: var(--body-size);
+            font-weight: 200;
+            color: var(--text);
+            margin-bottom: -0.5vh;
+          }
+
+
+          input[type="submit"] {
+            max-width: 150px;
+            background-color: var(--primary);
+            color: white;
+          }
+
+          textarea,
+          input {
+            resize: none;
+            border-radius: 8px;
+            font-family: var(--body);
+            color: #000000;
+            background-color: var(--secondary);
+            border: 2px solid var(--stroke);
+          }
+        }
+      }
+    }
+
     footer {
       grid-row: 3;
       width: 100%;
@@ -233,7 +295,6 @@ body {
     height: 100vh;
     width: 100%;
     z-index: -1;
-    background-color: var(--background);
 
     .orange {
       position: absolute;
