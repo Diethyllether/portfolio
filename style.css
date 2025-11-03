@@ -188,6 +188,7 @@ body {
       }
     }
 
+<<<<<<< HEAD
     #contatoContent {
       grid-template-columns: 15% 85%;
       grid-template-rows: 5vh 85vh;
@@ -238,6 +239,17 @@ body {
             color: #000000;
             background-color: var(--secondary);
             border: 2px solid var(--stroke);
+=======
+    #projetosContent {
+      aside {
+        details {
+          summary {}
+
+          ul {
+            li {
+              display: flex;
+            }
+>>>>>>> d0b2671cbf68a24f3ad5a254862ad54f5f51f271
           }
         }
       }
