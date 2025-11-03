@@ -80,38 +80,18 @@ function switchTab(tabName) {
 }
 
 function trocarTema() {
-<<<<<<< HEAD
     const button = document.getElementById("switch");
     (localStorage.getItem("tema") == "claro")
-    ? (
-        document.documentElement.classList.remove("claro"),
-        localStorage.setItem("tema", "escuro"),
-        button.classList.remove("fa-sun"),
-        button.classList.add("fa-moon")
-    )
-    : (
-        document.documentElement.classList.add("claro"),
-        localStorage.setItem("tema", "claro"),
-        button.classList.remove("fa-moon"),
-        button.classList.add("fa-sun")
-    );
-}
-
-function formSubmit() {
-    let name = document.getElementById().value;
-    let email = document.getElementById().value;
-    let message = document.getElementById().value;
-=======
-    (localStorage.getItem("tema") == "claro")
-    ? (document.documentElement.classList.remove("claro"), localStorage.setItem("tema", "escuro"))
-    : (document.documentElement.classList.add("claro"), localStorage.setItem("tema", "claro"));
-}
-
-function filtroProjeto() {
-    let array = document.getElementsByClassName("");
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
-    }
->>>>>>> d0b2671cbf68a24f3ad5a254862ad54f5f51f271
+        ? (
+            document.documentElement.classList.remove("claro"),
+            localStorage.setItem("tema", "escuro"),
+            button.classList.remove("fa-sun"),
+            button.classList.add("fa-moon")
+        )
+        : (
+            document.documentElement.classList.add("claro"),
+            localStorage.setItem("tema", "claro"),
+            button.classList.remove("fa-moon"),
+            button.classList.add("fa-sun")
+        );
 }
