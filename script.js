@@ -75,5 +75,15 @@ function switchTab(tabName) {
 }
 
 function trocarTema() {
-    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.remove("claro"), localStorage.setItem("tema", "escuro")) : (document.documentElement.classList.add("claro"), localStorage.setItem("tema", "claro"));
+    (localStorage.getItem("tema") == "claro")
+    ? (document.documentElement.classList.remove("claro"), localStorage.setItem("tema", "escuro"))
+    : (document.documentElement.classList.add("claro"), localStorage.setItem("tema", "claro"));
+}
+
+function filtroProjeto() {
+    let array = document.getElementsByClassName("");
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        
+    }
 }

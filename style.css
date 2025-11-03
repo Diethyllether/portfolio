@@ -181,6 +181,20 @@ body {
       }
     }
 
+    #projetosContent {
+      aside {
+        details {
+          summary {}
+
+          ul {
+            li {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
     footer {
       grid-row: 3;
       width: 100%;
