@@ -24,7 +24,7 @@
   --text: #000000;
   --text2: #EA523E;
   --text3: #F54A24;
-  --text4: ##05DF72;
+  --text4: #05DF72;
   --stroke: #000000;
 }
 
@@ -166,7 +166,7 @@ body {
               color: var(--text3);
             }
 
-            &:last-child {
+            &:last-child *{
               color: var(--text4);
             }
           }

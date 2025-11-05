@@ -1,7 +1,9 @@
 // God's in his heaven, all's right with the world.
 addEventListener("DOMContentLoaded", () => {
     switchTab(sessionStorage.getItem("currentTab"));
-    (localStorage.getItem("tema") == "claro") ? (document.documentElement.classList.add("claro")) : (document.documentElement.classList.remove("claro"));
+    (localStorage.getItem("tema") == "claro") 
+    ? (document.documentElement.classList.add("claro")) 
+    : (document.documentElement.classList.remove("claro"),button.classList.remove("fa-sun"),button.classList.add("fa-moon"));
 });
 
 function switchTab(tabName) {
@@ -94,4 +96,19 @@ function trocarTema() {
             button.classList.remove("fa-moon"),
             button.classList.add("fa-sun")
         );
+}
+
+function filtro(checkboxID, cardClass){
+    const checkbox = document.getElementById(checkboxID);
+    const card = document.getElementsByClassName(cardClass);
+
+    if (checkbox.checked) {
+        for(i=0; i<card.length;i++){
+            card[i].style.display = "grid";
+        }
+    } else {
+        for(i=0; i<card.length;i++){
+            card[i].style.display = "none";
+        }
+    }
 }
