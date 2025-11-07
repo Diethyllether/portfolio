@@ -25,7 +25,7 @@
 
             <button id="olaTab" onclick="switchTab('ola')">_ola</button>
             <button id="sobreTab" onclick="switchTab('sobre')">_sobre_mim</button>
-            <button id="projetosTab" onclick="switchTab('projetos')">_projetos</button>
+            <button class="card" id="projetosTab" onclick="switchTab('projetos')">_projetos</button>
             <button></button>
             <button onclick="trocarTema()"><i id="switch" class="fa-solid fa-moon"></i></button>
             <button id="contatoTab" onclick="switchTab('contato')">_contato</button>
@@ -76,41 +76,41 @@
                 <header></header>
             </section>
         </section>
-        <section id="projetosContent">
+        <section class="card" id="projetosContent">
             <aside>
                 <details>
                     <summary>projetos</summary>
                     <ul>
                         <li>
-                            <input type="checkbox" data-filter onclick="filtro('html', 'html')" name="html" id="html">
+                            <input type="checkbox" data-filter onchange="filtro('html', 'html')" name="html" id="html">
                             <h3>
                                 <i class="devicon-html5-plain"></i>
                                 html
                             </h3>
                         </li>
                         <li>
-                            <input type="checkbox" data-filter onclick="filtro('css', 'css')" name="css" id="css">
+                            <input type="checkbox" data-filter onchange="filtro('css', 'css')" name="css" id="css">
                             <h3>
                                 <i class="devicon-css3-plain"></i>
                                 css
                             </h3>
                         </li>
                         <li>
-                            <input type="checkbox" data-filter onclick="filtro('JS', 'JS')" name="JS" id="JS">
+                            <input type="checkbox" data-filter onchange="filtro('JS', 'JS')" name="JS" id="JS">
                             <h3>
                                 <i class="devicon-javascript-plain"></i>
                                 Javascript
                             </h3>
                         </li>
                         <li>
-                            <input type="checkbox" data-filter onclick="filtro('Nix', 'Nix')" name="Nix" id="Nix">
+                            <input type="checkbox" data-filter onchange="filtro('Nix', 'Nix')" name="Nix" id="Nix">
                             <h3>
                                 <i class="devicon-nixos-plain"></i>
                                 Nix
                             </h3>
                         </li>
                         <li>
-                            <input type="checkbox" data-filter onclick="filtro('C', 'C')" name="C" id="C">
+                            <input type="checkbox" data-filter onchange="filtro('C', 'C')" name="C" id="C">
                             <h3>
                                 <i class="devicon-c-original"></i>
                                 C language
@@ -121,8 +121,8 @@
             </aside>
             <section>
                 <div class="html css">
-                    <h3><span>Tulen</span></h3>
-                    <div id="projeto1">
+                    <h3>Tulen</h3>
+                    <div class="card" id="projeto1">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>
@@ -131,8 +131,8 @@
                     </div>
                 </div>
                 <div class="html css">
-                    <h3><span>Bitmap</span></h3>
-                    <div id="projeto2">
+                    <h3>Bitmap</h3>
+                    <div class="card" id="projeto2">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>
@@ -141,8 +141,8 @@
                     </div>
                 </div>
                 <div class="html css">
-                    <h3><span>Belara</span></h3>
-                    <div id="projeto3">
+                    <h3>Belara</h3>
+                    <div class="card" id="projeto3">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>
@@ -151,8 +151,8 @@
                     </div>
                 </div>
                 <div class="html css">
-                    <h3><span>GigaHertz</span></h3>
-                    <div id="projeto4">
+                    <h3>GigaHertz</h3>
+                    <div class="card" id="projeto4">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>
@@ -161,8 +161,8 @@
                     </div>
                 </div>
                 <div class="Nix">
-                    <h3><span>Dotfiles</span></h3>
-                    <div id="projeto5">
+                    <h3>Dotfiles</h3>
+                    <div class="card" id="projeto5">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>
@@ -171,8 +171,8 @@
                     </div>
                 </div>
                 <div class="hmtl css JS C Nix">
-                    <h3><span>Lorem</span></h3>
-                    <div id="projeto6">
+                    <h3>Lorem</h3>
+                    <div class="card" id="projeto6">
                         <div class="banner"></div>
                         <div class="desc">
                             <p></p>

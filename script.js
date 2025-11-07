@@ -99,26 +99,25 @@ function trocarTema() {
 }
 
 function filtro(checkboxID, cardClass) {
-    const checkbox = document.getElementById(checkboxID);
-    const card = document.getElementsByClassName(cardClass);
-
     const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-filter]');
     const anyChecked = Array.from(allCheckboxes).some(cb => cb.checked);
+    const allCards = document.querySelectorAll('#projetosContent section > div');
 
     if (!anyChecked) {
-        const allCards = document.querySelectorAll('[class*="card-"]'); // adjust selector as needed
         for (let i = 0; i < allCards.length; i++) {
             allCards[i].style.display = "grid";
         }
     } else {
-        if (checkbox.checked) {
-            for (let i = 0; i < card.length; i++) {
-                card[i].style.display = "grid";
-            }
-        } else {
-            for (let i = 0; i < card.length; i++) {
-                card[i].style.display = "none";
-            }
+        for (let i = 0; i < allCards.length; i++) {
+            allCards[i].style.display = "none";
         }
+        allCheckboxes.forEach(cb => {
+            if (cb.checked) {
+                const cards = document.getElementsByClassName(cb.id);
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].style.display = "grid";
+                }
+            }
+        });
     }
 }

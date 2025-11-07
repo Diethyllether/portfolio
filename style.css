@@ -204,10 +204,38 @@ body {
       section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
 
-        div {
+        &>div {
+          width: 80%;
+          height: 60%;
           display: grid;
+          grid-template-rows: 10% 90%;
+          h3 {
+            font-family: var(--heading);
+            font-size: var(--body-size);
+            color: var(--accent);
+          }
+
+          .card {
+            display: inherit;
+            grid-template-rows: 40% 60%;
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            .banner {
+              border-bottom: 2px solid var(--accent);
+
+              &:first-child {
+                background-image: url(assets/bitmapBanner.png);
+                background-image: 100% auto;
+              }
+            }
+            .desc {
+
+            }
+          }
         }
       }
     }
