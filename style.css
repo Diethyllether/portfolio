@@ -189,6 +189,7 @@ body {
     }
 
     #projetosContent {
+      grid-template-columns: 15% 85%;
       aside {
         details {
           summary {}
@@ -198,6 +199,15 @@ body {
               display: flex;
             }
           }
+        }
+      }
+      section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+
+        div {
+          display: grid;
         }
       }
     }

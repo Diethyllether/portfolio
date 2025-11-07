@@ -98,17 +98,27 @@ function trocarTema() {
         );
 }
 
-function filtro(checkboxID, cardClass){
+function filtro(checkboxID, cardClass) {
     const checkbox = document.getElementById(checkboxID);
     const card = document.getElementsByClassName(cardClass);
 
-    if (checkbox.checked) {
-        for(i=0; i<card.length;i++){
-            card[i].style.display = "grid";
+    const allCheckboxes = document.querySelectorAll('input[type="checkbox"][data-filter]');
+    const anyChecked = Array.from(allCheckboxes).some(cb => cb.checked);
+
+    if (!anyChecked) {
+        const allCards = document.querySelectorAll('[class*="card-"]'); // adjust selector as needed
+        for (let i = 0; i < allCards.length; i++) {
+            allCards[i].style.display = "grid";
         }
     } else {
-        for(i=0; i<card.length;i++){
-            card[i].style.display = "none";
+        if (checkbox.checked) {
+            for (let i = 0; i < card.length; i++) {
+                card[i].style.display = "grid";
+            }
+        } else {
+            for (let i = 0; i < card.length; i++) {
+                card[i].style.display = "none";
+            }
         }
     }
 }
