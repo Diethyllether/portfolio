@@ -65,7 +65,7 @@
                 <details>
                     <summary>contatos</summary>
                     <div class="contact">
-                        <h4>felipecornelio@outlook.com.br</h4>
+                        <h4>felipe.c.l@outlook.com </h4>
                     </div>
                     <div class="contact">
                         <h4></h4>
@@ -76,7 +76,7 @@
                 <header></header>
             </section>
         </section>
-        <section class="card" id="projetosContent">
+        <section id="projetosContent">
             <aside>
                 <details>
                     <summary>projetos</summary>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hmtl css JS C Nix">
+                <div class="C Nix">
                     <h3>Lorem</h3>
                     <div class="card" id="projeto6">
                         <div class="banner"></div>
@@ -184,25 +184,27 @@
         </section>
         <section id="contatoContent">
             <aside>
-                <details>
-                    <summary>contato</summary>
-                    <h3>felipecornelio@outlook.com.br</h3>
-                    <h3>+55 (31) 99260-7200</h3>
+                <details onclick="nemSeiMaisPprt('contato')">
+                    <summary><i id="contato" class="fa-solid fa-caret-right"></i> contato</summary>
+                    <h3><i class="fa-solid fa-envelope"></i>‎ felipe.c.l@outlook.com </h3>
+                    <h3><i class="fa-solid fa-phone"></i>‎ +55 (31) 99260-7200</h3>
                 </details>
-                <details>
-                    <summary>links</summary>
+                <details onclick="nemSeiMaisPprt('links')">
+                    <summary><i id="links" class="fa-solid fa-caret-right"></i> links</summary>
+                    <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
                     Não sobra nada
                 </details>
             </aside>
             <section>
-                <form action="#" onsubmit="formSubmit()">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="24694ba0-3772-46ca-b85d-3bd2602baedb">
                     <label for="nome">_nome</label>
-                    <input type="text" id="nome">
+                    <input type="text" name="nome" required>
                     <label for="email">_email</label>
-                    <input type="email" id="email">
+                    <input type="email" name="email" required>
                     <label for="mensagem">_mensagem</label>
-                    <textarea id="mensagem"></textarea>
-                    <input type="submit" value="enviar-mensagem">
+                    <textarea name="message" required></textarea>
+                    <button type="submit" name="submit">enviar-mensagem</button>
                 </form>
             </section>
 
@@ -212,7 +214,7 @@
                 <h4>Contato:</h4>
             </div>
             <div>
-                <h4>felipecornelio@outlook.com.br</h4>
+                <h4>felipe.c.l@outlook.com </h4>
             </div>
             <div>
                 <h4>+55 (31) 99260-7200</h4>

@@ -166,7 +166,7 @@ body {
               color: var(--text3);
             }
 
-            &:last-child *{
+            &:last-child * {
               color: var(--text4);
             }
           }
@@ -190,7 +190,10 @@ body {
 
     #projetosContent {
       grid-template-columns: 15% 85%;
+
       aside {
+        border-right: 2px solid var(--stroke);
+
         details {
           summary {}
 
@@ -201,6 +204,7 @@ body {
           }
         }
       }
+
       section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -213,6 +217,7 @@ body {
           height: 60%;
           display: grid;
           grid-template-rows: 10% 90%;
+
           h3 {
             font-family: var(--heading);
             font-size: var(--body-size);
@@ -224,17 +229,44 @@ body {
             grid-template-rows: 40% 60%;
             border: 2px solid var(--accent);
             border-radius: 16px;
+
             .banner {
               border-bottom: 2px solid var(--accent);
-
-              &:first-child {
-                background-image: url(assets/bitmapBanner.png);
-                background-image: 100% auto;
-              }
+              border-top-left-radius: 14px;
+              border-top-right-radius: 14px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: var(--accent);
             }
-            .desc {
 
-            }
+            .desc {}
+          }
+
+          #projeto1 .banner {
+            background-image: url(assets/tulenBanner.png);
+            background-size: 100%;
+          }
+
+          #projeto2 .banner {
+            background-image: url(assets/bitmapBanner.png);
+          }
+
+          #projeto3 .banner {
+            background-image: url(assets/belaraBanner.png);
+          }
+
+          #projeto4 .banner {
+            background-image: url(assets/logo.png);
+            background-size: auto 210%;
+          }
+
+          #projeto5 .banner {
+            background-image: url(assets/Dotfiles.svg);
+            background-size: 100%;
+          }
+
+          #projeto6 .banner {
+            
           }
         }
       }
@@ -246,9 +278,31 @@ body {
 
       aside {
         grid-row: span 2;
+        display: flex;
+        flex-direction: column;
         border-right: var(--stroke) 2px solid;
+        font-family: var(--body);
+        font-size: var(--body-size);
+        z-index: 999;
 
+        details {
+          summary {
+            display: flex;
+            align-items: center;
+            height: 5vh;
 
+            &:last-child {
+              border-top: var(--stroke) 2px solid;
+              border-bottom: var(--stroke) 2px solid;
+            }
+          }
+
+          h3 {
+            display: inline;
+            font-size: var(--body-size);
+            font-weight: 300;
+          }
+        }
       }
 
       section {
@@ -276,10 +330,12 @@ body {
           }
 
 
-          input[type="submit"] {
+          button[type="submit"] {
             max-width: 150px;
             background-color: var(--primary);
             color: white;
+            border: 2px solid var(--stroke);
+            border-radius: 8px;
           }
 
           textarea,

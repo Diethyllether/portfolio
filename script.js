@@ -1,5 +1,6 @@
 // God's in his heaven, all's right with the world.
 addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("switch");
     switchTab(sessionStorage.getItem("currentTab"));
     (localStorage.getItem("tema") == "claro") 
     ? (document.documentElement.classList.add("claro")) 
@@ -120,4 +121,11 @@ function filtro(checkboxID, cardClass) {
             }
         });
     }
+}
+
+function nemSeiMaisPprt(bglID) {
+    const bgl = document.getElementById(bglID);
+    (bgl.classList.contains("fa-caret-right"))
+    ? (bgl.classList.add("fa-caret-down"), bgl.classList.remove("fa-caret-right"))
+    : (bgl.classList.add("fa-caret-right"), bgl.classList.remove("fa-caret-down"))
 }
