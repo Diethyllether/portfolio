@@ -78,21 +78,14 @@
         </section>
         <section id="projetosContent">
             <aside>
-                <details>
+                <details open>
                     <summary>projetos</summary>
                     <ul>
                         <li>
                             <input type="checkbox" data-filter onchange="filtro('html', 'html')" name="html" id="html">
                             <h3>
                                 <i class="devicon-html5-plain"></i>
-                                html
-                            </h3>
-                        </li>
-                        <li>
-                            <input type="checkbox" data-filter onchange="filtro('css', 'css')" name="css" id="css">
-                            <h3>
-                                <i class="devicon-css3-plain"></i>
-                                css
+                                html/css
                             </h3>
                         </li>
                         <li>
@@ -113,49 +106,51 @@
                             <input type="checkbox" data-filter onchange="filtro('C', 'C')" name="C" id="C">
                             <h3>
                                 <i class="devicon-c-original"></i>
-                                C language
+                                C/C++
                             </h3>
                         </li>
                     </ul>
                 </details>
             </aside>
             <section>
-                <div class="html css">
+                <div class="html">
                     <h3>Tulen</h3>
                     <div class="card" id="projeto1">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>
+                                Recriação do template Tulen do Colorlib, feito com uso de display grid, flex e sem Javascript.
+                            </p>
                             <a href="https://diethyllether.github.io/tulen/"><button>ver-projeto</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="html css">
+                <div class="html">
                     <h3>Bitmap</h3>
                     <div class="card" id="projeto2">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>Recriação do site Bitmap do Colorlib, desenvolvido utilizando display flex, pseudo classes, combinadores CSS e sem display grid.</p>
                             <a href="https://diethyllether.github.io/bitmap/"><button>ver-projeto</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="html css">
+                <div class="html">
                     <h3>Belara</h3>
                     <div class="card" id="projeto3">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>Recriação do template Belara do Colorlib, construído com position, display inline-block, pseudo classes e sem uso de display flex ou grid.</p>
                             <a href="https://diethyllether.github.io/belara/"><button>ver-projeto</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="html css">
+                <div class="html">
                     <h3>GigaHertz</h3>
                     <div class="card" id="projeto4">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>Desenvolvimento de site a partir de mockup/wireframe utilizando apenas tags de tabela HTML, com fidelidade ao projeto e CSS em documento separado.</p>
                             <a href="https://diethyllether.github.io/GigaHertz/"><button>ver-projeto</button></a>
                         </div>
                     </div>
@@ -165,31 +160,32 @@
                     <div class="card" id="projeto5">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>Configuração de sistema Linux NixOS com gerenciador de janelas Hyprland, implementado com arquivos declarativos, composição Wayland e personalização de ambiente desktop.</p>
                             <a href="https://github.com/Diethyllether/dots"><button>ver-projeto</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="C Nix">
-                    <h3>Lorem</h3>
+                <div class="C">
+                    <h3>Placeholder</h3>
                     <div class="card" id="projeto6">
                         <div class="banner"></div>
                         <div class="desc">
-                            <p></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste suscipit blanditiis neque quo aut sed, dolore ipsam! Quo nulla?</p>
                             <a href="https://github.com/diethyllether"><button>ver-projeto</button></a>
                         </div>
                     </div>
                 </div>
+                
             </section>
         </section>
         <section id="contatoContent">
             <aside>
-                <details onclick="nemSeiMaisPprt('contato')">
+                <details onclick="arrowChange('contato')">
                     <summary><i id="contato" class="fa-solid fa-caret-right"></i> contato</summary>
                     <h3><i class="fa-solid fa-envelope"></i>‎ felipe.c.l@outlook.com </h3>
                     <h3><i class="fa-solid fa-phone"></i>‎ +55 (31) 99260-7200</h3>
                 </details>
-                <details onclick="nemSeiMaisPprt('links')">
+                <details onclick="arrowChange('links')">
                     <summary><i id="links" class="fa-solid fa-caret-right"></i> links</summary>
                     <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
                     Não sobra nada

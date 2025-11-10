@@ -189,17 +189,45 @@ body {
     }
 
     #projetosContent {
+      display: grid;
       grid-template-columns: 15% 85%;
+      height: 90vh;
 
       aside {
         border-right: 2px solid var(--stroke);
 
         details {
-          summary {}
+          font-family: var(--body);
+          font-size: var(--body-size);
+          font-weight: 300;
 
           ul {
             li {
-              display: flex;
+              display: grid;
+              grid-template-columns: 5% 95%;
+              gap: 10px;
+
+              input {
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background-color: transparent;
+                color: white;
+                border: 2px solid var(--accent);
+                border-radius: 3px;
+                cursor: pointer;
+
+                &:checked {
+                  background-color: var(--accent);
+                  background-image: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>');
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                }
+              }
+
+              i {
+                color: var(--accent);
+              }
             }
           }
         }
@@ -208,13 +236,17 @@ body {
       section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
+        grid-auto-rows: min-content;
+        align-items: start;
+        gap: 15px;
         justify-items: center;
+        overflow-y: auto;
+        height: 100%;
 
         &>div {
-          width: 80%;
-          height: 60%;
+          width: 90%;
+          height: 100%;
+          min-height: 250px;
           display: grid;
           grid-template-rows: 10% 90%;
 
@@ -236,10 +268,32 @@ body {
               border-top-right-radius: 14px;
               background-position: center;
               background-repeat: no-repeat;
-              background-color: var(--accent);
+              background-color: var(--secondary);
             }
 
-            .desc {}
+            .desc {
+              display: grid;
+              grid-template-rows: 70% 30%;
+              height: 100%;
+              width: 90%;
+              align-self: center;
+              justify-self: center;
+              font-family: var(--heading);
+              font-size: var(--body-size);
+
+              p {
+                align-self: center;
+              }
+
+              button {
+                align-self: self-start;
+                padding: 2%;
+                color: var(--text);
+                border-radius: 6px;
+                border: var(--stroke) 2px solid;
+                background-color: var(--accent);
+              }
+            }
           }
 
           #projeto1 .banner {
@@ -265,9 +319,7 @@ body {
             background-size: 100%;
           }
 
-          #projeto6 .banner {
-            
-          }
+          #projeto6 .banner {}
         }
       }
     }
@@ -290,6 +342,10 @@ body {
             display: flex;
             align-items: center;
             height: 5vh;
+
+            &:first-child:open {
+              border-bottom: 2px solid var(--stroke);
+            }
 
             &:last-child {
               border-top: var(--stroke) 2px solid;

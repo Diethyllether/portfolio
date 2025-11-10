@@ -123,9 +123,10 @@ function filtro(checkboxID, cardClass) {
     }
 }
 
-function nemSeiMaisPprt(bglID) {
+function arrowChange(bglID) {
     const bgl = document.getElementById(bglID);
     (bgl.classList.contains("fa-caret-right"))
     ? (bgl.classList.add("fa-caret-down"), bgl.classList.remove("fa-caret-right"))
     : (bgl.classList.add("fa-caret-right"), bgl.classList.remove("fa-caret-down"))
 }
+
